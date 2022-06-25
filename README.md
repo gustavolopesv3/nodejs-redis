@@ -27,9 +27,9 @@ DEFAULT PORT: 3000
 | reset-cache | /reset-cache | POST (need pass key to delete in body)|
 
 ## Enviroments
-DATABASE_URL="postgresql://postgres:postgres@localhost:5432/postgres"
-REDIS_HOST=localhost
-REDIS_PASSWORD=12344321
+- DATABASE_URL="postgresql://postgres:postgres@localhost:5432/postgres"
+- REDIS_HOST=localhost
+- REDIS_PASSWORD=12344321
 
 **by Gustavo Lopes**
 
