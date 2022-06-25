@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
+    "dev": "tsnd --respawn --inspect --transpile-only --ignore-watch node_modules src/app.ts",
     "build": "tsc"
   },
   "prisma": {
