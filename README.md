@@ -1,4 +1,4 @@
-# Express | typesSctipt | Postgress | Prima |redis,
+# Express | typesSctipt | Postgress | Prima |redis
 ## A simple project to study redis
 
 
