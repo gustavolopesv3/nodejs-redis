@@ -12,6 +12,8 @@ Install the dependencies and devDependencies and start the server.
 git clone https://github.com/gustavolopesv3/nodejs-redis.git
 yarn
 docker-compose up -d
+yarn prisma db push
+yarn prisma db seed
 yarn dev
 ```
 
