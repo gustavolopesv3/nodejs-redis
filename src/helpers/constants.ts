@@ -1,4 +1,5 @@
 
 export const REDIS_KEYS = {
-    USERS_ALL: 'users:all' 
+    USERS_ALL: 'users:all',
+    CEP: 'CEP:'
 }

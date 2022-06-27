@@ -2,7 +2,7 @@ import express from 'express'
 import UserController from './controllers/UserController'
 import ViaCepController from './controllers/ViaCepController'
 import ViaCep from './integrations/via-cep'
-import {redis} from './lib/cache'
+import {redis, removeCache} from './lib/redis'
 
 const app = express()
 app.use(express.json())
@@ -13,12 +13,12 @@ app.get('/users-cache', UserController.findAllSomeCache)
 
 app.get('/cep/:cep', ViaCepController.findByCep)
 
-app.post('/reset-cache', (req, res) => {
+app.post('/reset-cache', async (req, res) => {
     try {
         const { key } = req.body
-        redis.del(String(key)).then((response) => console.log(response))
+        await removeCache(key)
         return res.json({
-            success: true
+            success: true,
         })
     } catch (error) {
         return res.json({

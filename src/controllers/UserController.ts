@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import { Request, Response } from "express";
 import { REDIS_KEYS } from "../helpers/constants";
-import {getCache, setCache} from "../lib/cache";
+import {getCache, setCache} from "../lib/redis";
 
 const prisma = new PrismaClient()
 
